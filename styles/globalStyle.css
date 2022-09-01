@@ -3,13 +3,44 @@ html {
 }
 p {
   font-size: 2rem;
+  color: #e7f6f2;
 }
-a{
+Header a {
   font-size: 2rem !important;
+  color: #e7f6f2 !important;
+}
+body {
+  background-color: #2e2e36;
+}
+
+footer a,
+p,
+li {
+  text-decoration: none;
+  font-size: 2rem;
+}
+footer h2 {
+  font-size: 2rem;
+}
+footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #20232d;
+  color: #e7f6f2;
+  font-style: italic;
 }
 
 @media (max-width: 576px) {
   body {
     font-size: 7px;
   }
+}
+
+.carrusel {
+  /* limitar tamaños */
+}
+/* Carrusel texto inferior */
+.fondo {
+  background-color: rgba(0, 0, 0, 0.5);
 }

@@ -1,0 +1,15 @@
+html {
+  font-size: 10px;
+}
+p {
+  font-size: 2rem;
+}
+a{
+  font-size: 2rem !important;
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 7px;
+  }
+}

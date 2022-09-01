@@ -7,6 +7,9 @@ window.addEventListener("DOMContentLoaded", () => {
   Sintaxis de variables:
   let nombreDeVariable = valor;
   */
+
+  let razonContacto = getRazonContacto;
+
   let btnEnviar = document.getElementById("btnEnviar");
 
   btnEnviar.addEventListener("click", () => {
@@ -19,5 +22,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
   console.log("Evento DOMContentLoaded");
 });
+
+// Con esta funcion podremos ver que alternativa esta seleccionada
+function getRazonContacto() {
+  let entradaRazon = document.querySelector("input[name='razon']:checked");
+  if(entradaRazon == null){
+    mostrarError("Debe seleccionar una opcion");
+    return false;
+  }
+}
+
+//
+function mostrarError () {
+  console.error(mensajeDeError);
+}
 
 console.log("JS del head");

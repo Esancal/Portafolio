@@ -5,6 +5,9 @@ p {
   font-size: 2rem;
   color: #e7f6f2;
 }
+header {
+  background-color: #25252b;
+}
 Header a {
   font-size: 2rem !important;
   color: #e7f6f2 !important;
@@ -26,7 +29,7 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  background-color: #20232d;
+  background-color: #25252b;
   color: #e7f6f2;
   font-style: italic;
 }

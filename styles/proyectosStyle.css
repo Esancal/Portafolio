@@ -1,0 +1,11 @@
+.carrusel {
+  
+}
+/* Carrusel texto inferior */
+.fondo {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.miniText {
+  color: #e7f6f2;
+  font-size: 1rem;
+}

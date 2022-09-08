@@ -22,58 +22,61 @@
 
   <link rel="stylesheet" href="styles/globalStyle.css">
 
-  <link rel="stylesheet" href="/contactoStyle.css">
-  <script src="/contactoJS.js"></script>
+  <link rel="stylesheet" href="styles/contactoStyle.css">
+  <script src="js/contacto.js"></script>
 
 </head>
 
 <body>
 
   <div id="Header"></div>
-  <div class="container-fluid">
+  <div class="container-fluid" id="formulario">
 
     <h1>Contacto</h1>
-    <h3>Estoy interesado en gran variedad de cosas, no te contengas</h3>
+    <p>Estoy interesado en gran variedad de cosas, no te contengas</p>
 
     <br>
 
-    <form action="#" method="get">
-      <label for="nombre">Nombre</label>
-      <input id="nombre" name="nombre" type="text">
+    <form>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nombre" placeholder="Fulano" >
+        <label for="floatingInput" class="etiquetas">Nombre</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="correo" placeholder="name@example.com" >
+        <label for="floatingInput" class="etiquetas">Correo Electronico</label>
+        <p class="miniText">No compartire tu correo con nadie.</p>
+      </div>
 
-      <br>
+      <p>¿Por que me contactas?</p>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="razon" id="trabajo" value="trabajo">
+        <label class="form-check-label" for="trabajo">
+          <h5>Trabajo</h5>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="razon" id="ayuda" value="ayuda">
+        <label class="form-check-label" for="ayuda">
+          <h5>Ayuda</h5>
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="razon" id="comentario" value="comentario" >
+        <label class="form-check-label" for="comentario">
+          <h5>Comentario</h5>
+        </label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="titulo" placeholder="Titulo" maxlength="80" minlength="10" >
+        <label for="floatingInput" class="etiquetas">Titulo (maximo 80 Caracteres)</label>
+      </div>
+      <div class="form-floating">
+        <textarea name="mensaje" class="form-control" placeholder="Deja tu mensaje aqui" id="floatingTextarea2" style="height: 20vh" maxlength="1300"></textarea>
+        <label for="floatingTextarea2" class="etiquetas">Mensaje</label>
+      </div>
 
-      <label for="correo">Correo Electronico</label>
-      <input id="correo" name="correo" type="email">
-
-      <br>
-
-      <h4>¿Por que me contactas?</h4>
-      <br>
-
-      <label for="trabajo">Trabajo</label>
-      <input type="radio" id="trabajo" value="trabajo" name="razon">
-
-      <label for="ayuda">Ayuda</label>
-      <input type="radio" id="ayuda" value="ayuda" name="razon">
-
-      <label for="consulta">Consulta</label>
-      <input type="radio" id="consulta" value="consulta" name="razon">
-
-      <br>
-
-      <label for="asunto">Asunto</label>
-      <input id="asunto" name="correo" type="text">
-
-      <br>
-
-      <label for="mensaje">Mensaje</label>
-      <input id="mensaje" name="mensaje" type="text">
-
-      <br>
-
-      <!-- Cambio del tipo de boton para pruebas -->
-      <button type="button" id="btnEnviar" class="btn btn-primary">Enviar mensaje</button>
+      <button type="button" class="btn btn-primary" id="btnEnviar">Enviar</button>
     </form>
   </div>
   <!-- Que aparezca un PopUp que indique se respondera a la brevedad -->

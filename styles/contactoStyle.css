@@ -1,0 +1,10 @@
+#formulario {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.1rem solid;
+  border-color: cyan;
+  padding: 1rem;
+  width: 95%;
+}
+.etiquetas{
+  font-size: 1.2rem;
+}

@@ -1,10 +1,19 @@
 #formulario {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0.1rem solid;
-  border-color: cyan;
+  border-color: white;
   padding: 1rem;
   width: 95%;
 }
-.etiquetas{
+.etiquetas {
   font-size: 1.2rem;
+}
+.miniText {
+  font-size: 1rem;
+}
+#btnEnviar {
+  margin-top: 1rem;
+  height: 5vh;
+  width: 10vw;
+  font-size: 1.5rem;
 }

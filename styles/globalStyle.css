@@ -2,14 +2,14 @@ html {
   font-size: 10px;
 }
 header {
-  background-color: #25252b;
+  background-color: #052a33;
 }
 Header a {
   font-size: 2rem !important;
   color: #e7f6f2 !important;
 }
 body {
-  background-color: #2e2e36;
+  background-color: #03191e;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -26,7 +26,7 @@ h1 {
 label {
   font-size: 1.5rem;
 }
-label h5{
+label h5 {
   color: #e7f6f2;
 }
 footer p,
@@ -34,7 +34,7 @@ li {
   text-decoration: none;
   font-size: 2rem;
 }
-footer a{
+footer a {
   text-decoration: none;
   font-size: 2rem;
   color: #2cbad3;
@@ -46,7 +46,7 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  background-color: #25252b;
+  background-color: #052a33;
   color: #e7f6f2;
   font-style: italic;
 }

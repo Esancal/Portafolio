@@ -1,15 +1,23 @@
+:root {
+  --head-footer-bg-color: #370047;
+  --body-bg-color: #1e0032;
+  --font-color: #e7f6f2;
+}
 html {
   font-size: 10px;
 }
 header {
-  background-color: #052a33;
+  background-color: var(--head-footer-bg-color);
 }
 Header a {
   font-size: 2rem !important;
-  color: #e7f6f2 !important;
+  color: var(--font-color) !important;
+}
+header a:hover {
+  opacity: 0.7;
 }
 body {
-  background-color: #03191e;
+  background-color: var(--body-bg-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,17 +25,17 @@ body {
 }
 p {
   font-size: 2rem;
-  color: #e7f6f2;
+  color: var(--font-color);
 }
 h1 {
   font-size: 4rem;
-  color: #e7f6f2;
+  color: var(--font-color);
 }
 label {
   font-size: 1.5rem;
 }
 label h5 {
-  color: #e7f6f2;
+  color: var(--font-color);
 }
 footer p,
 li {
@@ -37,7 +45,10 @@ li {
 footer a {
   text-decoration: none;
   font-size: 2rem;
-  color: #2cbad3;
+  color: #8f00d7;
+}
+footer a:hover {
+  color: #d47eff;
 }
 footer h2 {
   font-size: 2rem;
@@ -46,8 +57,8 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
-  background-color: #052a33;
-  color: #e7f6f2;
+  background-color: var(--head-footer-bg-color);
+  color: var(--font-color);
   font-style: italic;
 }
 

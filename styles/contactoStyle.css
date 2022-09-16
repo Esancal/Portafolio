@@ -3,7 +3,7 @@
   border: 0.1rem solid;
   border-color: rgb(180, 180, 180);
   padding: 1rem;
-  width: 50vw;
+  width: 60%;
 }
 .etiquetas {
   font-size: 1.2rem;
@@ -17,6 +17,21 @@
   width: 10vw;
   font-size: 1.5rem;
 }
-input, textarea{
-  background-color: #ececec !important;
+input,
+textarea {
+  background-color: #ececec;
+  resize: none;
+}
+input:checked {
+  background-color: #ac00ca !important;
+  border-color: #ececec !important;
+}
+
+@media (max-width: 576px) {
+  #formulario {
+    width: 100%;
+  }
+  #btnEnviar {
+    width: 100%;
+  }
 }

@@ -43,19 +43,20 @@ $(document).ready(function () {
     const titulo = $("#titulo").val();
     const razon = $("input[name='razon']:checked").val();
     const mensaje = $("#mensaje").val();
+    const fecha_mensaje = new Date;
 
     const baseUrl = "https://portafolio-f3200-default-rtdb.firebaseio.com";
     const url = baseUrl + "/contacto.json";
     $.ajax(url, {
       method: "POST",
-      data: JSON.stringify({ nombre, email, titulo, razon, mensaje }),
+      data: JSON.stringify({ nombre, email, titulo, razon, mensaje, fecha_mensaje }),
     })
       .done(function (d) {
         alert("Se insertó su mensaje con ID: " + d.name);
       })
       .fail(function () {
         alert(
-          "Su mensaje no pudo ser guardado, por favor contacte al administrador!!!"
+          "Su mensaje no pudo ser guardado, por favor intente mas tarde"
         );
       });
   });

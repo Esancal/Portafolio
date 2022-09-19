@@ -9,12 +9,15 @@ html {
 header {
   background-color: var(--head-footer-bg-color);
 }
-Header a {
+header a {
   font-size: 2rem !important;
   color: var(--font-color) !important;
 }
 header a:hover {
   opacity: 0.7;
+}
+header .disabled{
+  opacity: 0.5;
 }
 body {
   background-color: var(--body-bg-color);

@@ -5,11 +5,11 @@ $(document).ready(function () {
   $("#pie-pagina").load("parts/footer.html");
 
   $("#btnEnviar").on("click", function () {
-    const nombre = itsBlank($("#nombre").val(), "Nombre");
+    const nombre = itsBlank($("#nombre").val(), "nombre");
     const email = getCorreo($("#correo").val());
-    const titulo = itsBlank($("#titulo").val(), "Titulo");
+    const titulo = itsBlank($("#titulo").val(), "titulo");
     const razon = getRazon($("input[name='razon']:checked").val());
-    const mensaje = itsBlank($("#mensaje").val(), "Mensaje");
+    const mensaje = itsBlank($("#mensaje").val(), "mensaje");
     const fecha_mensaje = new Date();
 
     const baseUrl = "https://portafolio-f3200-default-rtdb.firebaseio.com";
@@ -36,17 +36,21 @@ $(document).ready(function () {
   function itsBlank(value, name) {
     if (value == "") {
       console.log(name + ": El campo esta vacio");
+      $("#" + name).addClass("error");
     } else {
       console.log(name + ": El campo no esta vacio");
-      if (name == "Nombre" && value.length > 100) {
+      if (name == "nombre" && value.length > 100) {
         console.log("Nombre: Cantidad de caracteres superior a 100");
-      }
-      if (name == "Titulo" && value.length > 80) {
+        $("#nombre").addClass("error");
+      } else if (name == "nombre") $("#nombre").removeClass("error");
+      if (name == "titulo" && value.length > 80) {
         console.log("Titulo: Cantidad de caracteres superior a 80");
-      }
-      if (name == "Mensaje" && value.length > 1300) {
+        $("#titulo").addClass("error");
+      } else if (name == "titulo") $("#titulo").removeClass("error");
+      if (name == "mensaje" && value.length > 1300) {
         console.log("Mensaje: Cantidad de caracteres superior a 1300");
-      }
+        $("#mensaje").addClass("error");
+      } else if (name == "mensaje") $("#mensaje").removeClass("error");
     }
   }
 
@@ -56,8 +60,10 @@ $(document).ready(function () {
 
     if (emailRegex.test(correo)) {
       console.log("Correo: Formato correcto");
+      $("#correo").removeClass("error");
     } else {
       console.log("Correo: Formato incorrecto");
+      $("#correo").addClass("error");
     }
   }
 
@@ -65,6 +71,9 @@ $(document).ready(function () {
     // Si no seleccionan razon = undefined
     if (razon == undefined) {
       console.log("Razon: undefined");
+      $("#razonContacto").addClass("error");
+    } else {
+      $("#razonContacto").removeClass("error");
     }
   }
 });

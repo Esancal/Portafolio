@@ -26,7 +26,10 @@ input:checked {
   background-color: #ac00ca !important;
   border-color: #ececec !important;
 }
-
+.error{
+  border: 0.25rem solid;
+  border-color: red;
+}
 @media (max-width: 576px) {
   #formulario {
     width: 100%;
